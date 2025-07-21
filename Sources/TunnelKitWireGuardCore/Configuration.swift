@@ -242,6 +242,10 @@ extension WireGuard {
     }
 
     public struct Configuration: Codable, Equatable, WireGuardConfigurationProviding {
+        public var dnsHTTPSURL: URL?
+        
+        public var dnsTLSServerName: String?
+        
         public let tunnelConfiguration: TunnelConfiguration
 
         public var interface: InterfaceConfiguration {
