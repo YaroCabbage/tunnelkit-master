@@ -42,7 +42,7 @@ let package = Package(
         // .package(url: /* package url */, from: "1.0.0"),
         .package(url: "https://github.com/SwiftyBeaver/SwiftyBeaver", from: "2.1.1"),
         .package(url: "https://github.com/passepartoutvpn/openssl-apple", from: "3.2.107"),
-        .package(url: "https://github.com/AtomSDK/wireguard-apple.git", .branch("master")),
+        .package(url: "https://github.com/YaroCabbage/wireguard-apple.git", .branch("master")),
 //        .package(url: "https://github.com/passepartoutvpn/wireguard-apple", branch: "develop")
 //        .package(name: "WireGuardKit", path: "../wireguard-apple")
     ],
