@@ -63,10 +63,6 @@ public protocol WireGuardConfigurationProviding {
 
 extension WireGuard {
     public struct ConfigurationBuilder: WireGuardConfigurationProviding {
-        public var dnsHTTPSURL: URL?
-        
-        public var dnsTLSServerName: String?
-        
         private static let defaultGateway4 = IPAddressRange(from: "0.0.0.0/0")!
 
         private static let defaultGateway6 = IPAddressRange(from: "::/0")!
@@ -137,23 +133,23 @@ extension WireGuard {
             }
         }
 
-//        public var dnsHTTPSURL: URL? {
-//            get {
-//                interface.dnsHTTPSURL
-//            }
-//            set {
-//                interface.dnsHTTPSURL = newValue
-//            }
-//        }
-//
-//        public var dnsTLSServerName: String? {
-//            get {
-//                interface.dnsTLSServerName
-//            }
-//            set {
-//                interface.dnsTLSServerName = newValue
-//            }
-//        }
+        public var dnsHTTPSURL: URL? {
+            get {
+                interface.dnsHTTPSURL
+            }
+            set {
+                interface.dnsHTTPSURL = newValue
+            }
+        }
+
+        public var dnsTLSServerName: String? {
+            get {
+                interface.dnsTLSServerName
+            }
+            set {
+                interface.dnsTLSServerName = newValue
+            }
+        }
 
         public var mtu: UInt16? {
             get {
@@ -242,10 +238,6 @@ extension WireGuard {
     }
 
     public struct Configuration: Codable, Equatable, WireGuardConfigurationProviding {
-        public var dnsHTTPSURL: URL?
-        
-        public var dnsTLSServerName: String?
-        
         public let tunnelConfiguration: TunnelConfiguration
 
         public var interface: InterfaceConfiguration {
@@ -286,13 +278,13 @@ extension WireGuard {
             interface.dnsSearch
         }
 
-//        public var dnsHTTPSURL: URL? {
-////            interface.dns
-//        }
-//
-//        public var dnsTLSServerName: String? {
-////            interface.dnsTLSServerName
-//        }
+        public var dnsHTTPSURL: URL? {
+            interface.dnsHTTPSURL
+        }
+
+        public var dnsTLSServerName: String? {
+            interface.dnsTLSServerName
+        }
 
         public var mtu: UInt16? {
             interface.mtu
