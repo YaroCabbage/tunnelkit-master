@@ -21,10 +21,10 @@
     {
       "identity" : "wireguard-apple",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/YaroCabbage/wireguard-apple.git",
+      "location" : "https://github.com/amnezia-vpn/amneziawg-apple.git",
       "state" : {
         "branch" : "master",
-        "revision" : "a32d44c1756b10ad260be118a67f5f2862ee31db"
+        "revision" : "1bac3889d381c86195e41607a047c0c789c6f852"
       }
     }
   ],
